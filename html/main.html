@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<style>
+
+
+		td {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	font-size: 0.9em;
+	border: 0px white;
+	border-radius: 8px;
+	/*모서리 둥글게*/
+}
+
+table {
+	border: 0px solid;
+	border-color: lightgrey;
+}
+</style>
+	<meta charset="utf-8">
+
+	<meta name="description" content="쿠카 40대 합주단원을 위한 홈페이지입니다">
+
+
+	<link rel="stylesheet" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Cute+Font|Jua|Sunflower:300&amp;subset=korean" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<link rel="shortcut icon" href="../../favicon.ico">
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<title>쿠카 40대 합주단</title>
+</head>
+
+<body>
+
+
+	<div class="mainBox">
+		<h1>쿠카 40대 합주단</h1>
+	</div>
+
+
+	<div class="contentBox">
+		<div class="imgContainer">
+			<img class="totoro" src="../images/civil.png">
+		</div>
+		<div class="loginBox">
+			<img class="loginBtn" src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" style="display: none;" />
+
+			<!--			<button class="logoutBtn" style="display: none;">로그아웃 </button>-->
+		</div>
+	</div>
+
+	<div class="hello" style="display: none">
+		<p>
+			안녕하세요 <span class="userName"> </span>님 </p>
+		<p>
+			<button class="submit"> 마니또 확인하기</button>
+		</p>
+
+	</div>
+
+	<div class="alert" style="display: none">
+		<p>당신의 마니또는 <span id="manittoName"> </span> 입니다</p>
+	</div>
+
+
+	<!--달력-->
+	<table id="calendar" border="3" align="center" style="display: none;">
+		<tr>
+			<!-- label은 마우스로 클릭을 편하게 해줌 -->
+			<td><label onclick="prevCalendar()">
+					<img src="../images/back.png" alt="">
+				</label> </td>
+			<td align="center" id="tbCalendarYM" colspan="5">
+				yyyy년 m월</td>
+			<td><label onclick="nextCalendar()">
+					<img src="../images/right-arrow.png" alt="">
+				</label></td>
+		</tr>
+		<tr>
+			<td align="center">일</td>
+			<td align="center">월</td>
+			<td align="center">화</td>
+			<td align="center">수</td>
+			<td align="center">목</td>
+			<td align="center">금</td>
+			<td align="center">토</td>
+		</tr>
+	</table>
+
+
+
+	<!--  날짜 클릭시 상세 팝업 -->
+	<div id="PopupDiv" class="popup" style="display: none;">
+
+		<div class="popupContent">
+			<div class="popupHead">
+				<span id="dayPopupCloseBtn" class="close">&times;</span>
+				<h3>출석체크</h3>
+			</div>
+			<div class="popupBody">
+
+				<div>
+					<section class="folderBox">
+						<span class="yearMonthDate">1</span>
+						<span class="dayDate">2</span>
+						<p>공지 불러오는 중...</p>
+					</section>
+
+					<p class="attendList">출석 현황</p>
+					<div class="attendListBox" style="display: none;">
+						<p class="part">Solist</p>
+						<p>
+							<span class="member ">김예찬</span>
+							<span class="member ">한동휘</span>
+						</p>
+						<p class="part">1st</p>
+						<p>
+							<span class="member ">최윤주</span>
+							<span class="member ">인동경</span>
+							<span class="member ">김동언</span>
+							<span class="member ">강승경</span>
+						</p>
+						<p>
+							<span class="member ">최재윤</span>
+							<span class="member ">장건희</span>
+							<span class="member ">배나경</span>
+							<span class="member ">안수빈</span>
+						</p>
+						<p>
+							<span class="member ">안승현</span>
+							<span class="member ">이재준</span>
+							<span class="member ">김상현</span>
+							<span class="member">원하연</span>
+						</p>
+						<p class="part">2nd</p>
+						<p>
+							<span class="member ">이현주</span>
+							<span class="member ">유호성</span>
+							<span class="member">김다은</span>
+							<span class="member ">김성준</span>
+						</p>
+						<p>
+							<span class="member">이한비</span>
+							<span class="member ">김진원</span>
+							<span class="member ">임지현</span>
+							<span class="member">하정수</span>
+						</p>
+						<p>
+							<span class="member">김재형</span>
+							<span class="member ">박서영</span>
+							<span class="member ">김선아</span>
+						</p>
+
+						<p class="part">Bass</p>
+						<p>
+							<span class="member ">송령신</span>
+							<span class="member">조민지</span>
+							<span class="member">구민성</span>
+							<span class="member">민혜림</span>
+						</p>
+						<p>
+							<span class="member">이용규</span>
+							<span class="member">이승훈</span>
+							<span class="member ">김세연</span>
+							<span class="member">강창우</span>
+						</p>
+						<p>
+							<span class="member">제은선</span>
+							<span class="member">김아란</span>
+						</p>
+
+						<p class="part">알토, 콘트라, 퍼커션 </p>
+						<p>
+							<span class="member">이한솔</span>
+							<span class="member">서혜린</span>
+							<span class="member">김재빈</span>
+							<span class="member">호기성</span>
+						</p>
+						<p>
+							<span class="member">김진오</span>
+							<span class="member">김형진</span>
+
+						</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<form>
+						<input type="hidden" id="senderName" name="member" />
+						<input type="hidden" id="sendDate" name="sendDate" />
+
+						<select name="status" id="">
+							<option value="불참">불참</option>
+							<option value="늦참">늦참</option>
+							<option value="조퇴">조퇴</option>
+						</select>
+						<input type="text" class="additionalReason" name="reason" placeholder="시간 및 이유를 적어주세요" id="addReasonInput">
+					</form>
+					<button type="button" id="sendReasonBtn" class="popupBtn">확인</button>
+				</div>
+			</div>
+			<div class="popupFoot">
+				<!--<button class="popupBtn" id="attendBtn">출석체크</button>--> <button class="popupBtn" id="addReasonBtn">기타 사유</button>
+				<button class="popupBtn" id="calcelReasonBtn">취소</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="detailPopup" style="display: none">
+
+		<span class="detailReason">
+			<span class="reason">지각</span>:
+			<span class="reasonContent"> 아파서 늦게옴</span>
+
+		</span>
+	</div>
+
+	<!--히든 폼들-->
+	<form>
+		<input type="hidden" name="popupDate" id="popupDate" />
+
+	</form>
+
+</body>
+
+</html>

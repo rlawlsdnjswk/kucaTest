@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<style>
+
+
+		td {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	font-size: 0.9em;
+	border: 0px white;
+	border-radius: 8px;
+	/*모서리 둥글게*/
+}
+
+table {
+	border: 0px solid;
+	border-color: lightgrey;
+}
+</style>
+	<meta charset="utf-8">
+
+	<meta name="description" content="쿠카 40대 합주단원을 위한 홈페이지입니다">
+
+
+	<link rel="stylesheet" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Cute+Font|Jua|Sunflower:300&amp;subset=korean" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/attend.js"></script>
+	<link rel="shortcut icon" href="../../favicon.ico">
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<title>쿠카 40대 합주단</title>
+</head>
+
+<body>
+
+
+	<div class="mainBox">
+		<h1>쿠카 40대 합주단</h1>
+	</div>
+
+
+	<div class="contentBox">
+		<div class="imgContainer">
+			<img class="totoro" src="../images/civil.png">
+		</div>
+		<div class="loginBox">
+			<img class="loginBtn" src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" />
+
+			<!--			<button class="logoutBtn" style="display: none;">로그아웃 </button>-->
+		</div>
+	</div>
+
+
+
+	<form>
+		<input type="hidden" id="senderName" name="member" />
+		<input type="hidden" id="sendDate" name="sendDate" />
+		<input type="hidden" id="sendTime" name="sendTime" />
+
+
+	</form>
+
+
+
+	<!--히든 폼들-->
+	<form>
+		<input type="hidden" name="popupDate" id="popupDate" />
+
+	</form>
+
+</body>
+
+</html>

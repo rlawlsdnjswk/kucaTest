@@ -1,0 +1,362 @@
+body {
+
+	font-family: 'Jua', sans-serif;
+	margin: 0px;
+}
+
+div.mainBox {
+
+	background-color: lightcoral;
+	color: white;
+	height: 10%;
+	padding: 10px;
+	text-align: center;
+
+}
+
+div.alert {
+	margin: 100px 0px 0px 0px;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+div.loginBox {
+	padding: 10px;
+	text-align: center;
+}
+
+div.popupBtnBox {
+	text-align: center;
+	padding: 10px;
+}
+
+div.detailPopup {
+	width: 60%;
+	position: fixed;
+	top: 20%;
+	left: 20%;
+	z-index: 10;
+	font-size: 1.5em;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+
+}
+
+div.attendListBox {
+	overflow: scroll;
+	height: 350px;
+	font-size: 1.3em;
+}
+
+img.loginBtn {
+
+	width: 300px;
+}
+
+input {
+	width: 30%;
+	height: 20px;
+	font-size: 0.8em;
+	padding: 10px;
+}
+
+button {
+	width: 200px;
+	height: 40px;
+	font-family: 'Jua', sans-serif;
+	font-size: 1.2em;
+	color: white;
+	background-color: cornflowerblue;
+	border-radius: 10px;
+
+}
+
+button.logoutBtn {
+	background-color: #FFEB00;
+	width: 100px;
+	font-size: 1em;
+	color: #3C1E1E;
+}
+
+.mainImg {
+	width: 100%;
+}
+
+.totoro {
+	width: 95%;
+	padding: 10px 5px 10px 5px;
+	border-radius: 20px;
+
+}
+
+p.part {
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;
+}
+
+span#manittoName {
+	font-size: 1.2em;
+	color: lightblue;
+}
+
+span.red {
+
+	color: red;
+}
+
+span.member {
+	margin-left: 5px;
+	color: gray;
+}
+
+span.late {
+	color: lightseagreen;
+	text-decoration: line-through;
+
+}
+
+span.here {
+	color: lightseagreen;
+}
+
+span.quit {
+	color: firebrick;
+}
+
+span.delay {
+	color: mediumseagreen;
+	opacity: 0.3;
+}
+
+span.absent {
+	text-decoration: line-through;
+	color: lightgray;
+}
+
+span.delayComplete {
+	color: mediumseagreen;
+}
+
+
+span.yearMonthDate {
+	font-size: 1.5em;
+}
+
+span.dayDate {
+	font-size: 1.5em;
+}
+
+p {
+	text-align: center;
+}
+
+p.notice {
+	font-size: 1.5em;
+	color: red;
+}
+
+p#warningTxt {
+	font-size: 0.8em;
+	padding: 0px 0px 0px 20px;
+	margin: 0;
+	color: red;
+}
+
+p#inputLing {
+
+	margin: 10px 0px 10px 20px;
+}
+
+
+
+td {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 0.9em;
+	border: 0px white;
+	border-radius: 8px;
+	/*모서리 둥글게*/
+}
+
+td.noPractice {
+	opacity: 0.4;
+}
+
+
+table {
+	width: 90%;
+	border: 0px solid;
+	border-color: lightgrey;
+}
+
+
+
+.popup {
+	display: block;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 50px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+/* Modal Content */
+.popupContent {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 90%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.popupHead {
+	padding: 1px 20px;
+	background-color: darkslategray;
+	color: white;
+	font-family: 'Sunflower', sans-serif;
+
+}
+
+.popupBody {
+	padding: 20px 10px 0px;
+}
+
+.popupBody div:nth-child(2) {
+	padding: 10px;
+	text-align: center;
+}
+
+.popupBody div:nth-child(2) button {
+	width: 80px;
+	height: 40px;
+	margin: 20px;
+}
+
+.popupBody .infoRow {
+	margin-bottom: 20px;
+}
+
+.popupBody input {
+	width: 150px;
+	height: 30px;
+	padding: 0px 0 0 5px;
+}
+
+.popupBody select {
+	width: 60px;
+	height: 30px;
+	padding: 0px 0px 0px 2px;
+
+}
+
+
+.popupFoot {
+	text-align: center;
+	padding: 2px 16px;
+	background-color: darkslategray;
+	color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+
+	to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+
+	to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+label {
+	width: 50px;
+
+}
+
+.popupBtn {
+	width: 100px;
+	height: 50px;
+	font-size: 1em;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	box-shadow: 1px 1px;
+
+}
+
+.disabled {
+	color: lightgrey;
+}
